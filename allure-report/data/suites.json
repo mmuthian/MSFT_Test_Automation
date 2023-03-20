@@ -1,0 +1,269 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "The Internet Guinea Pig Website: As a user, I can log into the secure area",
+    "children" : [ {
+      "name" : "",
+      "uid" : "3d14d947c5ea47e",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306038830,
+        "stop" : 1679306038837,
+        "duration" : 7
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "Given I am on the login page",
+      "uid" : "1fa39dcc3544fc66",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306038839,
+        "stop" : 1679306076752,
+        "duration" : 37913
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "When I login with tomsmith and SuperSecretPasswsord!",
+      "uid" : "999faa7800f7ec15",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306076754,
+        "stop" : 1679306077911,
+        "duration" : 1157
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "Then I should see a flash message saying You logged into a secure area!",
+      "uid" : "7526119d33b5abae",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "failed",
+      "time" : {
+        "start" : 1679306077912,
+        "stop" : 1679306088463,
+        "duration" : 10551
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "",
+      "uid" : "877f016d1671b68d",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306088464,
+        "stop" : 1679306088466,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "",
+      "uid" : "3d4cd013a021d20b",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306088470,
+        "stop" : 1679306088471,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "Given I am on the login page",
+      "uid" : "1e8baa7d63db985a",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306088472,
+        "stop" : 1679306088844,
+        "duration" : 372
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "When I login with foobar and barfoo",
+      "uid" : "4996797fe5f9939c",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306088846,
+        "stop" : 1679306089996,
+        "duration" : 1150
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "Then I should see a flash message saying Your username is invalid!",
+      "uid" : "b7896e32304b1495",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306089998,
+        "stop" : 1679306090091,
+        "duration" : 93
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "",
+      "uid" : "f04f0bd4ad669d6c",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306090092,
+        "stop" : 1679306090094,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "",
+      "uid" : "8a0aa5236d3952f0",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306747901,
+        "stop" : 1679306747906,
+        "duration" : 5
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "Given I am on the login page",
+      "uid" : "f889afcb279abcb4",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306747909,
+        "stop" : 1679306751385,
+        "duration" : 3476
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "When I login with tomsmith and SuperSecretPasswsord!",
+      "uid" : "6c0d7b90b88bd084",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306751387,
+        "stop" : 1679306752689,
+        "duration" : 1302
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "Then I should see a flash message saying You logged into a secure area!",
+      "uid" : "c7c02b7ccc70a5e1",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "failed",
+      "time" : {
+        "start" : 1679306752690,
+        "stop" : 1679306763277,
+        "duration" : 10587
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "",
+      "uid" : "1cddc914ad5c3d4b",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306763278,
+        "stop" : 1679306763279,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "",
+      "uid" : "92452234172cbb1c",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306763284,
+        "stop" : 1679306763285,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "Given I am on the login page",
+      "uid" : "2631dca5f5d9f5c3",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306763287,
+        "stop" : 1679306763604,
+        "duration" : 317
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "When I login with foobar and barfoo",
+      "uid" : "cbb314069f315f63",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306763612,
+        "stop" : 1679306764571,
+        "duration" : 959
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "Then I should see a flash message saying Your username is invalid!",
+      "uid" : "b8e267e45a28314c",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306764573,
+        "stop" : 1679306764664,
+        "duration" : 91
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    }, {
+      "name" : "",
+      "uid" : "82fb0e3d1af47b49",
+      "parentUid" : "fdbdc9ea7ee956858561e08f47b3a285",
+      "status" : "passed",
+      "time" : {
+        "start" : 1679306764665,
+        "stop" : 1679306764666,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-111.0.5563.65" ]
+    } ],
+    "uid" : "fdbdc9ea7ee956858561e08f47b3a285"
+  } ]
+}

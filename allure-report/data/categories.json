@@ -1,0 +1,39 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "Error: Expect $(`#flash`) to have text containing",
+      "children" : [ {
+        "name" : "Then I should see a flash message saying You logged into a secure area!",
+        "uid" : "7526119d33b5abae",
+        "parentUid" : "c2b57e8ce37340e6c03f055fd8003c1a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1679306077912,
+          "stop" : 1679306088463,
+          "duration" : 10551
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome-111.0.5563.65" ]
+      }, {
+        "name" : "Then I should see a flash message saying You logged into a secure area!",
+        "uid" : "c7c02b7ccc70a5e1",
+        "parentUid" : "c2b57e8ce37340e6c03f055fd8003c1a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1679306752690,
+          "stop" : 1679306763277,
+          "duration" : 10587
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome-111.0.5563.65" ]
+      } ],
+      "uid" : "c2b57e8ce37340e6c03f055fd8003c1a"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

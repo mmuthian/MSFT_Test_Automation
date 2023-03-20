@@ -1,0 +1,58 @@
+{
+  "uid" : "c7c02b7ccc70a5e1",
+  "name" : "Then I should see a flash message saying You logged into a secure area!",
+  "historyId" : "17ca43ea-0532-48fa-8710-db6c4a3aed4e",
+  "time" : {
+    "start" : 1679306752690,
+    "stop" : 1679306763277,
+    "duration" : 10587
+  },
+  "status" : "failed",
+  "statusMessage" : "Error: Expect $(`#flash`) to have text containing",
+  "statusTrace" : "Error: Expect $(`#flash`) to have text containing\n\n- Expected  - 1\n+ Received  + 2\n\n- You logged into a secure area!\n+ Your password is invalid!\n+ ×\n    at World.<anonymous> (file:///D:/Develop/MSFT_Test_Automation/features/step-definitions/steps.ts:20:41)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : "D:.Develop.MSFT_Test_Automation.features.login.feature"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "The Internet Guinea Pig Website: As a user, I can log into the secure area"
+  }, {
+    "name" : "feature",
+    "value" : "The Internet Guinea Pig Website: As a user, I can log into the secure area"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-111.0.5563.65"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "c7c02b7ccc70a5e1.json",
+  "parameterValues" : [ "chrome-111.0.5563.65" ]
+}

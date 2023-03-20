@@ -1,0 +1,52 @@
+{
+  "uid" : "4996797fe5f9939c",
+  "name" : "When I login with foobar and barfoo",
+  "historyId" : "dd886cbe-361d-43fd-ae4b-d7f3018a2469",
+  "time" : {
+    "start" : 1679306088846,
+    "stop" : 1679306089996,
+    "duration" : 1150
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "package",
+    "value" : "D:.Develop.MSFT_Test_Automation.features.login.feature"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "The Internet Guinea Pig Website: As a user, I can log into the secure area"
+  }, {
+    "name" : "feature",
+    "value" : "The Internet Guinea Pig Website: As a user, I can log into the secure area"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-111.0.5563.65"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4996797fe5f9939c.json",
+  "parameterValues" : [ "chrome-111.0.5563.65" ]
+}

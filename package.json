@@ -5,9 +5,11 @@
   "type": "module",
   "devDependencies": {
     "@badisi/wdio-harness": "^2.0.2",
-    "@wdio/cli": "^8.5.8",
+    "@types/allure-js-commons": "^0.0.1",
+    "@wdio/allure-reporter": "^8.5.0",
+    "@wdio/cli": "^8.6.5",
     "@wdio/cucumber-framework": "^8.5.6",
-    "@wdio/local-runner": "^8.5.8",
+    "@wdio/local-runner": "^8.6.3",
     "@wdio/spec-reporter": "^8.4.0",
     "@wdio/types": "^8.1.2",
     "chromedriver": "^111.0.0",
@@ -25,16 +27,19 @@
     "wdio": "wdio run ./wdio.conf.ts",
     "build": "tsc",
     "symlink": "npm link",
+    "allure": "allure generate ./reports/allure-results --clean && allure open",
     "use:symlink": "npm link wdio-html-nice-reporter",
     "clean": "rimraf ./lib  ./reports ./logs",
     "clean:build": "rimraf ./lib",
     "clean:reports": "rimraf ./reports",
     "clean:logs": "rimraf ./logs",
     "wdio-html-format-reporter": "~0.2.7",
-    "report": "node node_modules/wdio-html-nice-reporter/lib/makeReport.js master-report.html 'reports/html-reports/'"
+    "report": "node node_modules/wdio-html-nice-reporter/lib/makeReport.js master-report.html 'reports/html-reports/'",
+    "test": "npm run wdio && npm run report"
   },
   "dependencies": {
     "@rpii/wdio-html-reporter-pdf": "^8.0.0",
+    "log4js": "^6.9.1",
     "wdio-html-nice-reporter": "^8.1.0"
   }
 }

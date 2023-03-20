@@ -1,5 +1,7 @@
 import type { Options } from '@wdio/types'
 import {ReportAggregator, HtmlReporter} from 'wdio-html-nice-reporter';
+import AllureReporter from '@wdio/allure-reporter';
+
 let reportAggregator : ReportAggregator;
 
 export const config: Options.Testrunner = {
@@ -157,8 +159,13 @@ export const config: Options.Testrunner = {
         collapseTests: false,
         //to turn on screenshots after every test
         useOnAfterCommandForScreenshot: false,
-    }
-    ]
+    }],
+    [AllureReporter, {
+        outputDir: './reports/allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+      }]
+    
 ],
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
@@ -205,7 +212,7 @@ export const config: Options.Testrunner = {
             outputDir: './reports/html-reports/',
             filename: 'master-report.html',
             reportTitle: 'Master Report',
-            browserName: capabilities.browserName,
+            browserName: 'chrome',
             showInBrowser: true,
         });
         reportAggregator.clean();
