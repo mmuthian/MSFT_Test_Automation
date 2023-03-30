@@ -38,7 +38,7 @@ export const config: WebdriverIO.Config = {
     // will be called from there.
     //
     specs: [
-        './test/features/*.feature',
+        './test/features/dashboard.feature',
     ],
     // Patterns to exclude.
     exclude: [

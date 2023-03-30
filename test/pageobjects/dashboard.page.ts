@@ -5,13 +5,13 @@ import Page from './page.ts';
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class LoginPage extends Page {
+class DashboardPage extends Page {
     /**
      * define selectors using getter methods
      */
-    public get inputUsername () {
-        return $('#username');
-    }
+     public async getElementByID(id: string): Promise<WebdriverIO.Element> {
+        return $(`#select_fiscalYear`);
+      }
 
     public get inputPassword () {
         return $('#password');
@@ -34,8 +34,8 @@ class LoginPage extends Page {
     /**
      * overwrite specific options to adapt it to page object
      */
-   // public open () {
-  //      return super.open('login');
-  //  }
+    public open () {
+        return super.open();
+    }
 }
-export default new LoginPage();
+export default new DashboardPage();
