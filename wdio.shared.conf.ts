@@ -39,6 +39,8 @@ export const config: WebdriverIO.Config = {
     //
     specs: [
         './test/features/dashboard.feature',
+        './test/features/candidatePool.feature',
+        './test/features/reviewQueue.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -60,7 +62,7 @@ export const config: WebdriverIO.Config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // ===================
     // Test Configurations

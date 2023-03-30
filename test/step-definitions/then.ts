@@ -1,13 +1,24 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
-
-import LoginPage from '../pageobjects/login.page.ts';
-import SecurePage from '../pageobjects/secure.page.ts';
+import { expect, assert} from "chai";
+import dashboardPage from '../pageobjects/dashboard.page.ts';
 
 const pages = {
-    login: LoginPage
+    dashboard: dashboardPage
 }
 
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
-    await expect(SecurePage.flashAlert).toBeExisting();
-    await expect(SecurePage.flashAlert).toHaveTextContaining(message);
+
+Then(/^the (\w+) dropdown value should be (\d+)$/, async (id: string, option: string) => {
+    const dropdown = await $(`select#${id}`);
+    const selectedOption = await dropdown.getValue();
+    await browser.pause(2000); // pause for 2 seconds
+    expect(parseInt(selectedOption)).to.equal(parseInt(option));
 });
+
+Then(/^I should see an element containing the text (\d+)$/, async (text: string) => {
+    const element = await $('//div[contains(text(),\'' + text + '\')]');
+    await element.waitForDisplayed();
+    const elementText = await element.getText();
+    await browser.pause(2000);
+    assert.strictEqual(elementText.includes(text), true);
+  });
+  
