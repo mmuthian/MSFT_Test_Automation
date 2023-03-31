@@ -1,8 +1,8 @@
 {
-  "name": "webdriverIO-with-cucumberBDD",
+  "name": "webdriverIO-cucumberBDD-TS",
   "version": "2.0.4",
   "description": "WebDriverIO-v8 bindings for Node.js with Cucumber",
-  "author": "Amiya Pattanaik <pattnaik_amiya@yahoo.com>",
+  "author": "Muthu, Amirtaraj",
   "license": "MIT",
   "main": "./node_modules/.bin/wdio",
   "type": "module",
@@ -18,11 +18,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/amiya-pattnaik/webdriverIO-with-cucumberBDD.git"
+    "url": "https://github.com/mmuthian/MSFT_Test_Automation.git"
   },
-  "homepage": "https://github.com/amiya-pattnaik/webdriverIO-with-cucumberBDD",
+  "homepage": "https://github.com/mmuthian/MSFT_Test_Automation/tree/develop",
   "bugs": {
-    "url": "https://github.com/amiya-pattnaik/webdriverIO-with-cucumberBDD/issues"
+    "url": "https://github.com/mmuthian/MSFT_Test_Automation/issues"
   },
   "scripts": {
     "allure:history": "mkdir -p allure-report/history ./test/reports/allure-results/history && cp -a allure-report/history ./test/reports/allure-results/",
