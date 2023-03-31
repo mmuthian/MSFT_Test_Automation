@@ -21,4 +21,16 @@ Then(/^I should see an element containing the text (\d+)$/, async (text: string)
     await browser.pause(2000);
     assert.strictEqual(elementText.includes(text), true);
   });
+
+  Then(/^the checkbox with id "([^"]*)" should be (checked|unchecked)$/, async (id: string, shouldBeChecked: 'checked' | 'unchecked') => {
+    const checkbox = await $(`#${id}`);
+    const isChecked = await checkbox.isSelected();
+    if (shouldBeChecked === 'checked') {
+      expect(isChecked).to.be.true;
+      await browser.pause(2000);
+    } else {
+      expect(isChecked).to.be.false;
+      await browser.pause(2000);
+    }
+  });
   

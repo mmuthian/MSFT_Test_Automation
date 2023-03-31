@@ -129,21 +129,22 @@ export const config: WebdriverIO.Config = {
       ['allure', {
           outputDir: './test/reports/allure-results',
           disableWebdriverStepsReporting: true,
-          disableWebdriverScreenshotsReporting: true,
+          disableWebdriverScreenshotsReporting: false,
       }],
-      //
-      // ['json', {
-      //   outputDir: './test/reports/json-results'
-      //   }],
+      
+    //   ['json', {
+    //     outputDir: './test/reports/json-results'
+    //     }],
 
-      // ['junit', {
-      //   outputDir: './test/reports/junit-results',
-      //   outputFileFormat: function(options) {
-      //         return `results-${options.cid}.${options.capabilities}.xml`
-      //     }
-      // }],
+    //   ['junit', {
+    //     outputDir: './test/reports/junit-results',
+    //     outputFileFormat: function(options) {
+    //           return `results-${options.cid}.${options.capabilities}.xml`
+    //       }
+    //   }],
 
-    ],
+ ],
+    
     //
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
@@ -315,6 +316,7 @@ export const config: WebdriverIO.Config = {
      */
     // after: function (result, capabilities, specs) {
     // },
+
     /**
      * Gets executed right after terminating the webdriver session.
      * @param {Object} config wdio configuration object

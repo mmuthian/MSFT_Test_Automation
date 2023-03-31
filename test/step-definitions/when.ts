@@ -19,3 +19,8 @@ When(/^I select the (\d+) option from the dropdown with ID (\w+)$/, async (optio
     const dropdown = await $(`select#${id}`);
     await dropdown.selectByAttribute('value', option);
 });
+
+When(/^I select the checkbox with ID "([^"]*)"$/, async (id: string) => {
+    const checkbox = await $(`#${id}`);
+    await checkbox.click();
+});
