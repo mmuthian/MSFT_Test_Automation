@@ -26,8 +26,6 @@
   },
   "scripts": {
     "allure:history": "mkdir -p allure-report/history ./test/reports/allure-results/history && cp -a allure-report/history ./test/reports/allure-results/",
-    "allure-report-old": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open -p 5050",
-    "xunit-report-old": "node_modules/.bin/xunit-viewer --server -p=3000 -t='Automation Test Report' --results=./test/reports/junit-results --output=./xunit-report/xunit-report.html",
     "allure-report": "allure generate ./test/reports/allure-results --clean && allure open",
     "xunit-report": "xunit-viewer --results=./test/reports/junit-results --output=./xunit-report/xunit-report.html",
     "test-sauce": "wdio wdio.sauce.conf.ts",

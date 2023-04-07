@@ -1,5 +1,5 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
-import DashboardPage from '../pageobjects/dashboard.page.ts';
+import DashboardPage from '../pageobjects/element.page.js';
 
 
 const pages = {
