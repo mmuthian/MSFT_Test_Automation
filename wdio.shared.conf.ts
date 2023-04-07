@@ -1,8 +1,52 @@
 import url  from 'node:url'
 import path from 'node:path'
+import {ReportAggregator } from 'wdio-html-nice-reporter';
 import type { Options } from '@wdio/types'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
+
+const LOG = require('log4js');
+LOG.configure({
+    appenders: {
+        fileLog: {
+            type: 'file',
+            filename: "logs/html-reporter.log",
+            maxLogSize: 5000000,
+            level: 'debug'
+        },
+        debugLog: {
+            type: 'file',
+            filename: "logs/debug-html-reporter.log",
+            maxLogSize: 5000000,
+            level: 'debug'
+        },
+        'out': {
+            type: 'stdout',
+            layout: {
+                type: "colored"
+            }
+        },
+        'filterOut': {
+            type: 'stdout',
+            layout: {
+                type: "colored"
+            },
+            level: 'info'
+        }
+    },
+    categories: {
+        file: {appenders: ['fileLog'], level: 'info'},
+        default: {appenders: ['out', 'fileLog'], level: 'info'},
+        console: {appenders: ['out'], level: 'info'},
+        debug: {appenders: ['debugLog'], level: 'debug'}
+    }
+});
+
+//pick the category above to match the output you want.
+let logger = LOG.getLogger("default");
+
+let reportAggregator : ReportAggregator;
+
 
 export const config: WebdriverIO.Config = {
     //
@@ -124,11 +168,22 @@ export const config: WebdriverIO.Config = {
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: [
       'spec',
-      ['allure', {
-          outputDir: './test/reports/allure-results',
-          disableWebdriverStepsReporting: true,
-          disableWebdriverScreenshotsReporting: false,
-      }],
+      //['allure', {
+      //    outputDir: './test/reports/allure-results',
+      //    disableWebdriverStepsReporting: true,
+      //    disableWebdriverScreenshotsReporting: false,
+      //}],
+      
+    ["html-nice", {
+      debug: false,
+      outputDir: './reports/html-reports/',
+      filename: 'report.html',
+      reportTitle: 'Web Test Report',
+      showInBrowser: false,
+      useOnAfterCommandForScreenshot: false,
+      linkScreenshots: true,
+      LOG: logger
+  }]
       
     //   ['json', {
     //     outputDir: './test/reports/json-results'
@@ -172,7 +227,7 @@ export const config: WebdriverIO.Config = {
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
-        ignoreUndefinedDefinitions: false
+        ignoreUndefinedDefinitions: true
     },
 
     //
@@ -188,8 +243,19 @@ export const config: WebdriverIO.Config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare: function (config, capabilities) {
+      reportAggregator = new ReportAggregator(
+          {
+              outputDir: './reports/html-reports/',
+              filename: process.env.TEST_BROWSER + '-master-report.html',
+              reportTitle: 'ODNxt Web Test Report',
+              browserName: process.env.TEST_BROWSER ? process.env.TEST_BROWSER : 'unspecified',
+              showInBrowser: true,
+              LOG: logger
+          });
+
+      reportAggregator.clean();
+  },
     /**
      * Gets executed before a worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
@@ -331,8 +397,22 @@ export const config: WebdriverIO.Config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+
+    afterTest: function (test: any, context: any, result: any) {
+      // if test passed, ignore, else take and save screenshot.
+      if (result.passed) {
+          return;
+      }
+      //@ts-ignore
+      driver.logScreenshot(String.format("Test Ended in {0}", result.error.stack));
+  },
+
+  onComplete: function (exitCode, config, capabilities, results) {
+    (async () => {
+        await reportAggregator.createReport();
+    })();
+},
+
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session

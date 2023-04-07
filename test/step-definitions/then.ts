@@ -1,6 +1,8 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
 import { expect, assert} from "chai";
 import dashboardPage from '../pageobjects/element.page.js';
+import path from 'path';
+import moment from 'moment';
 
 const pages = {
     dashboard: dashboardPage
@@ -40,12 +42,26 @@ Then(/^I should see an element containing the text (\d+)$/, async (text: string)
     const elementText = await element.getText();
     await browser.pause(2000);
     assert.strictEqual(elementText.includes(text), true);
+    await takeScreenshot('Element with Text: ' + text);
   });
 
+  async function takeScreenshot(message) {
+    const timestamp = moment().format('YYYYMMDD-HHmmss.SSS');
+    fs.ensureDirSync('reports/html-reports/screenshots/');
+    const filepath = path.join('reports/html-reports/screenshots/', timestamp + '.png');
+    this.browser.saveScreenshot(filepath);
+    this.logMessage(message) ;
+    process.emit('test:screenshot', filepath);
+    return this;
+}
 
+
+  
   Then(/^I should see an URL containing the text "([^"]*)"$/, async (text: string) => {
     const elementUrl = await browser.getUrl();
     await browser.pause(2000);
     assert.strictEqual(elementUrl.includes(text), true);
   });
+
+
   
